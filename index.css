@@ -1,0 +1,10 @@
+.navbar{
+    background-color:#000080;
+  color: aliceblue;
+}
+footer{
+
+  display: flex;
+    background-color:#000080;
+    margin-top: 70px;
+}
