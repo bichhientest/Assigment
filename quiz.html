@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Quiz</title>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./angular.min.js"></script>
+    <script src="./quiz.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+</head>
+
+<body ng-app="myapp"> 
+   <myquiz style=" display: flex; flex-direction: column; align-items: center;justify-content: center;"></myquiz>
+</body>
+<script>
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    var navbar = document.getElementById("navbar");
+    var content = document.getElementById("content");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+            content.classList.add("sticky2");
+        } else {
+            navbar.classList.remove("sticky");
+            content.classList.remove("sticky2");
+        }
+    }
+</script>
+
+
+
+</html>

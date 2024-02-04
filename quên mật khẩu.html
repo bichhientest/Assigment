@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quên mật khẩu</title>
+    <script src="./angular.min.js"></script>
+    <script src="./angular-route.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./quên mật khẩu.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/js/bootstrap.js">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/brands.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/fontawesome.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/solid.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/js/fontawesome.js">
+</head>
+<body ng-app="myapp">
+    
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid  ">
+          <a class="navbar-brand"style="color: aliceblue;" href="http://127.0.0.1:5500/index.html"> <i class="fa-solid fa-house"></i> Trang chủ</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active " style="color: aliceblue;" aria-current="page" href="http://127.0.0.1:5500/gi%E1%BB%9Bi%20thi%E1%BB%87u.html#"><i class="fa-solid fa-calendar-days"></i> Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"style="color: aliceblue;" href="http://127.0.0.1:5500/Li%C3%AAn%20h%E1%BB%87.html"><i class="fa-solid fa-phone"></i>Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"style="color: aliceblue;" href="http://127.0.0.1:5500/g%C3%B3p%20%C3%BD.html"><i class="fa-solid fa-envelope"></i>Góp ý</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: aliceblue;"href="http://127.0.0.1:5500/h%E1%BB%8Fi%20%C4%91%C3%A1p.html"><i class="fa-solid fa-circle-question"></i>Hỏi đáp</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"style="color: aliceblue;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user"></i>Tài khoản
+                </a>
+                <ul class="dropdown-menu" style="background-color: #00008B;">
+                  <li><a class="dropdown-item "style="color: aliceblue;" href="#">Đăng ký</a></li>
+                  <li><a class="dropdown-item"style="color: aliceblue;" href="#">Đăng Nhập</a></li>
+                  <li><a class="dropdown-item" style="color: aliceblue;"href="#">Quên mật khẩu</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item"style="color: aliceblue;" href="#">Đăng xuất</a></li>
+                  <li><a class="dropdown-item"style="color: aliceblue;" href="#">Đổi mât khẩu</a></li>
+                  <li><a class="dropdown-item"style="color: aliceblue;" href="#">Cập nhật tài khoản</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item"style="color: aliceblue;" href="#">Danh mục môn học</a></li>
+                  <li><a class="dropdown-item"style="color: aliceblue;" href="#">Thi trắc nghiệm</a></li>
+                
+                </ul>
+              </li>               
+            </ul>               
+          </div>
+        </div>
+      </nav>
+    <header style=" margin-top: 5px; background-image: url(./img/fpoly2.jpg); background-size: 1480px;height: 500px;">
+    </header>
+    <main style="text-align: center;">
+
+        <div class="container" style="text-align: center;" ng-controller="myctrl">
+            <div class="row">
+                <div class="col-sm-8">
+                    .<div class="card">
+                        <div class="card-header" style="color: white; background-color:#00008B ;">
+                           ĐẶT LẠI MẬT KHẨU
+                        </div>
+                        <div class="card-body">
+                     <form name="formsv">
+    
+                        <div class="form-group">  
+                            <label for="">Email</label>  <br>                
+                             <input ng-model="email" style="width: 500px; border-color:#006400;" required  type="email" name="txtemail"> 
+                             <br>                                        
+                            <label style="color: red;" ng-show="formsv.txtemail.$invalid"> Email phải đúng định dạng</label>
+                          </div>
+                        <div class="form-group">  <br>
+                            <label for="">Họ và tên</label>  <br>                
+                             <input ng-model="name" style="width: 500px; border-color:#006400;" required minlength="5" maxlength="25" type="text" name="txtname"> 
+                             <br>                                        
+                            <label style="color: red;" ng-show="formsv.txtname.$invalid"> Vui lòng nhập họ tên</label>
+                          </div> 
+                          <br>
+                         Số điện thoại
+                          <div class="form-group ">
+                         
+                           <input ng-model="salary"  style="width: 500px; border-color:#006400;" required length="10"  type="text" name="txtsalary"> 
+                            <label class="alert alert-danger" ng-show="formbonus.txtsalary.$invalid">Số điện thoại phải đúng 10 ký tự</label>
+                          </div> <br>
+                          Mật khẩu mới
+                          <div class="form-group ">
+                         
+                           <input ng-model="salary"  style="width: 500px; border-color:#006400;" required minlength="5"  type="text" name="txtsalary"> 
+                            <label class="alert alert-danger" ng-show="formbonus.txtsalary.$invalid">Mật khẩu phải dài hơn 5 ký tự</label>
+                          </div>
+                           <br>
+                          Giới tính 
+                            <div class="form-check form-check-inline">
+                              <input ng-model="gender" name="gender" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Nam">
+                              <label class="form-check-label" for="gender">Nam</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input  class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Nu">
+                              <label class="form-check-label" for="gender">Nữ</label>
+                            </div>  
+                                       
+                     </form>
+                        </div>
+                        <div class="card-footer text-muted" style=" background-color:#00008B ;">
+                            <button type="button" class="btn btn-light">Tiếp tục</button>
+                            <label style="color: #006400;" ng-show="formsv.$valid"> Chúc mừng bạn đã hoàn thành! </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
