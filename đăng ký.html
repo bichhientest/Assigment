@@ -84,22 +84,24 @@
                             <label for="">Họ và tên</label>  <br>                
                              <input ng-model="name" style="width: 500px; border-color:#006400;" required minlength="5" maxlength="25" type="text" name="txtname"> 
                              <br>                                        
-                            <label style="color: red;" ng-show="formsv.txtname.$invalid"> Vui lòng nhập họ tên</label>
+                            <label style="color: red;" ng-show="formsv.txtname.$invalid"> Vui lòng nhập họ tên trên 5 kí tự</label>
                           </div> 
                           <br>
-                         Số điện thoại
-                          <div class="form-group ">
-                         
-                           <input ng-model="salary"  style="width: 500px; border-color:#006400;" required length="10"  type="text" name="txtsalary"> 
-                            <label class="alert alert-danger" ng-show="formbonus.txtsalary.$invalid">Số điện thoại phải đúng 10 ký tự</label>
-                          </div> <br>
-                          Mật khẩu
-                          <div class="form-group ">
-                         
-                           <input ng-model="salary"  style="width: 500px; border-color:#006400;" required minlength="5"  type="text" name="txtsalary"> 
-                            <label class="alert alert-danger" ng-show="formbonus.txtsalary.$invalid">Mật khẩu phải dài hơn 5 ký tự</label>
-                          </div>
-                           <br>
+                        
+                         <div class="form-group">  
+                          <label for="">Số điện thoại</label>                
+                           <br>      
+                           <input ng-model="salary"  style="width: 500px; border-color:#006400;"required ng-minlength="10" ng-maxlength="10"  type="text" name="txtsalary"> <br>                               
+                          <label style="color: red;" ng-show="formsv.txtsalary.$invalid"> Vui lòng nhập số điện thoại đúng 10 ký tự</label>
+                        </div> 
+                        <br>
+                        <div class="form-group">  
+                          <label for="">Mật khẩu</label>  
+                           <br>      
+                           <input ng-model="password"  style="width: 500px; border-color:#006400;"required ng-minlength="5" required type="password"    type="text" name="txtpassword" ng-pattern="/[!@#$%^&*(),.?\":{}| > <br>                               
+                          <label style="color: red;" ng-show="formsv.txtpassword.$invalid"> Vui lòng nhập mật khẩu dài hơn 5 kí tự</label>
+                        </div> 
+                        <br>
                           Giới tính 
                             <div class="form-check form-check-inline">
                               <input ng-model="gender" name="gender" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Nam">

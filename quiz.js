@@ -48,7 +48,7 @@ app.directive("myquiz",function(myfactory){
 app.factory("myfactory",function($http){
     $http.get('../db/Quizs/ADAV.js').then(function(res){
         question= res.data;
-        alert("Hãy Start the Quiz để bắt đầu bài test!")
+        alert("Start the Quiz để bắt đầu bài test!")
     });
     return {
         getquestion:function(id){
